@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  font-family: "Josefin Slab", serif;
+}
+/* burger menu start */
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+.burgerMenu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.burgerMenu span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  transition: all 0.5s;
+}
+.burgerMenu span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.burgerMenu span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+.burgerMenu.active span:nth-of-type(1) {
+  display: none;
+}
+.burgerMenu.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.burgerMenu.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #ffefba;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+.navbar.active {
+  transform: translateX(0);
+}
+.navbar li {
+  list-style-type: none;
+} */
+/* navbar start */
+.navbar_ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.navbar_ul .li:hover:not(.active) {
+  cursor: pointer;
+  background-color: #0f77e0;
+  border-radius: 10px;
+  color: white;
+}
+.navbar_ul_li input {
+  outline: none;
+}
+@media screen and(min-width: 769px) {
+  .burgerMenu {
+    display: none;
+  }
+}
+@media screen and (max-width: 426px) {
+  .inputsContainer {
+    width: 80%;
+  }
+  .table th {
+    font-size: 8px;
+  }
+  .navbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .inputs input {
+    width: 150px;
+  }
+  .table td {
+    font-size: 10px;
+  }
+  #td_img_pos img {
+    width: 18px;
+    height: 18px;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 314px;
+  text-align: center;
+}
+.inputsContainer label {
+  font-size: 14px;
+}
+.inputsContainer input {
+  outline: none;
+  margin-bottom: 5px;
+  width: 200px;
+}
+.form {
+  display: flex;
+}
+#button {
+  width: 80px;
+  height: 20px;
+  margin: 5px;
+  background-color: #4137f8e0;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+#button:hover {
+  background-color: #4137f8a8;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.label label {
+  width: 100px;
+  text-align: start;
+}
+.containerList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  border-bottom: blue solid 2px;
+}
+.title_container {
+  display: flex;
+  justify-content: center;
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+.table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #d6d9fa;
+  border: 1px solid #ababab;
+}
+#td_img_pos {
+  display: flex;
+  justify-content: space-around;
+}
+.table td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+}
+.table img {
+  width: 25px;
+  cursor: pointer;
+}
+.table img:hover {
+  filter: grayscale(0.7);
+}
+/*? modal start */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.input_name_profile,
+.input_photo_profile,
+.input_photo_post,
+.input_desc_post {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btnEdit {
+  background-color: #3897f0;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn_add {
+  background-color: #3897f0;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn_add:hover {
+  background-color: #1877c7;
+}
+.btn_cancel {
+  background-color: #3897f0;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn_cancel:hover {
+  background-color: #1877c7;
+}
+
+/* Модальное содержание/коробка */
+.modal_content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% сверху и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Кнопка закрытия */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* pagination start */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a {
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  margin: 3px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #0f77e0;
+  border-radius: 10px;
+  color: white;
+}

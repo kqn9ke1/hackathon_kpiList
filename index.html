@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon | Native js Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="burgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div class="navbar">
+      <ul class="navbar_ul">
+        <li class="li">Home</li>
+        <li class="li">About Us</li>
+        <li class="li">Contacts</li>
+        <li class="navbar_ul_li">
+          <form class="navForm" action="#">
+            <input type="search" placeholder="search" />
+          </form>
+        </li>
+      </ul>
+    </div>
+    <!--! контейнер для формы -->
+    <div class="container">
+      <div class="inputsContainer">
+        <div class="title_container">
+          <h2>Form</h2>
+        </div>
+        <form action="#">
+          <div class="form">
+            <div class="label">
+              <label for="firstName">first Name:</label>
+              <label for="lastName">last Name:</label>
+              <label for="number">Mobile Number:</label>
+              <label for="weekResult">Week Result:</label>
+              <label for="monthResult">Month Result:</label>
+            </div>
+            <div class="inputs">
+              <input id="firstName" type="text" required />
+              <input id="lastName" type="text" required />
+              <input id="number" type="number" required />
+              <input id="weekResult" type="number" required />
+              <input id="monthResult" type="number" required />
+            </div>
+          </div>
+          <button id="button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="containerList">
+      <div class="title_container">
+        <h2>Students List</h2>
+      </div>
+      <!--! создаем таблицу -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile Number</th>
+            <th>Week KPI</th>
+            <th>Month KPI</th>
+            <th>Edit/Delete</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+            <td>Gloria</td>
+            <td>Reeves</td>
+            <td>123456789</td>
+            <td>98</td>
+            <td>120</td>
+            <td id="td_img_pos">
+              <img src="./assets/icons/edit_icon.png" alt="edit_icon" />
+              <img src="./assets/icons/delete_icon.png" alt="delete_icon" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="editModal" class="modal">
+        <div class="modal_content">
+          <input
+            type="text"
+            placeholder="Введите ваше имя"
+            class="input_name_profile"
+            id="editFirstName"
+          />
+          <input
+            type="text"
+            placeholder="Ваше фамилию"
+            class="input_photo_profile"
+            id="editLastName"
+          />
+          <input
+            type="text"
+            placeholder="Введите номер"
+            class="input_photo_post"
+            id="editNumber"
+          />
+          <input
+            type="text"
+            placeholder="Введите ежеденельный KPI"
+            class="input_desc_post"
+            id="editWeekResult"
+          />
+          <input
+            type="text"
+            placeholder="Введите результат месяца"
+            class="input_desc_post"
+            id="editMonthResult"
+          />
+          <button type="button" class="btn_add" id="editSave">
+            Сохранить изменения
+          </button>
+          <button type="button" class="btn_cancel" id="btncancel">
+            Отмена
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <a href="#" id="prev"><< Previous</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#" id="next">Next >></a>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

@@ -1,0 +1,60 @@
+{
+  "students": [
+    {
+      "firstName": "Kanykei",
+      "lastName": "D",
+      "number": "123456789",
+      "weekResult": "100",
+      "monthResult": "120",
+      "id": 1
+    },
+    {
+      "firstName": "qwerqwer",
+      "lastName": "kim",
+      "number": "102",
+      "weekResult": "100",
+      "monthResult": "1",
+      "id": 3
+    },
+    {
+      "firstName": "qwerqwer",
+      "lastName": "C",
+      "number": "1",
+      "weekResult": "1",
+      "monthResult": "159",
+      "id": 5
+    },
+    {
+      "firstName": "qwerqwer",
+      "lastName": "D",
+      "number": "200",
+      "weekResult": "1",
+      "monthResult": "1",
+      "id": 7
+    },
+    {
+      "firstName": "qwerqwer",
+      "lastName": "E",
+      "number": "1",
+      "weekResult": "1",
+      "monthResult": "230",
+      "id": 8
+    },
+    {
+      "firstName": "Guy",
+      "lastName": "GL",
+      "number": "777",
+      "weekResult": "100",
+      "monthResult": "100",
+      "id": 9
+    },
+    {
+      "firstName": "Kanykei",
+      "lastName": "qwer",
+      "number": "1",
+      "weekResult": "1",
+      "monthResult": "1",
+      "id": 10
+    }
+  ]
+}
